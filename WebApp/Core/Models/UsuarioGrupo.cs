@@ -1,9 +1,12 @@
 ﻿namespace ProyectoEvaluacion.Models
 {
-    public class UsuarioGrupo
+    public partial class UsuarioGrupo
     {
+        public int IdUsuario { get; set; }
+        public string CodRol { get; set; } = null!;
 
-        public Usuario oUsuario { get; set; }
-        public Rol oRol { get; set; }
+        public virtual Rol CodRolNavigation { get; set; } = null!;
+        public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+
     }
 }

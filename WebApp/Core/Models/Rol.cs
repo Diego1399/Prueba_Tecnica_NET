@@ -1,8 +1,16 @@
 ﻿namespace ProyectoEvaluacion.Models
 {
-    public class Rol
+    public partial class Rol
     {
-        public int CodRol { get; set; }
-        public string Nombre { get; set; }
+        public Rol()
+        {
+            UsuarioGrupo = new HashSet<UsuarioGrupo>();
+        }
+
+        public string CodRol { get; set; } = null!;
+        public string Rol1 { get; set; } = null!;
+
+        public virtual ICollection<UsuarioGrupo> UsuarioGrupo { get; set; }
+
     }
 }
